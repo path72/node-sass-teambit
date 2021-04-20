@@ -2,10 +2,10 @@
  * HEADER
  * section
  */
- 
+
 header {
 	@include flex-row-cv;
-	@include fx-between;
+	@include fx-row-between;
 	height: 75px;
 	padding: 10px 0;
 	border-bottom: 1px solid $grey; 
@@ -17,19 +17,12 @@ header {
 		}
 	}
 	ul {
-		display: flex;
-		align-items: center;
-		li {
-			a {
-				@include flex-row-cv;
-				img {
-					height: 18px;
-					margin-right: 10px; 
-				}
-			}
-		}
+		@include flex-row-cv;
 		li:not(:last-Child) {
-			padding-right: 40px;
+			padding-right: 44px;
+		}
+		.fas {
+			margin-left: 5px;
 		}
 	}
 }

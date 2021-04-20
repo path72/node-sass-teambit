@@ -16,11 +16,12 @@ body {
 	/* font-size: 12px; */
 }
 a {
+	color: $brown;
 	text-decoration: none;
-	color: $brown;
-}
-a:hover {
-	color: $brown;
+	transition: all .2s ease;
+	&:hover {
+		color: $blue;
+	}
 }
 ul {
 	list-style: none;
@@ -31,32 +32,46 @@ ul {
 }
 
 // % TEXTS % 
+.txt_payoff {
+	font-size: 50px;
+	font-weight: 700;
+}
+.txt_sub_title {
+	font-size: 22px;
+	font-weight: 400;
+}
 .txt_1 {
 	font-size: 14px;
 	font-weight: 700;
 }
 .txt_2 {
-	/* font-size: 1.2em; */
-	font-weight: 600;
-	line-height: 3em;
+	font-size: 14px;
+	font-weight: 400;
 }
 .txt_3 {
-	font-size: 1em;
-	font-weight: 300;
+	font-size: 13px;
+	font-weight: 400;
 }
-/* .txt_small_1 {
-	font-size: 0.9em;
-	font-weight: 600; 
-} */
-/* .txt_small_1 {
-	font-size: 0.9em;
-	font-weight: 600; 
-} */
+
 
 // % BUTTONS % 
 .btn {
+	@include flex-row-cv;
 	padding: 8px 20px;
 	border-radius: 6px;
+	img {
+		height: 18px;
+		margin-right: 10px; 
+	}
+	&.btn_full {
+		color: $white;
+		border: 1px solid $blue;
+		background-color: $blue;
+		&:hover {
+			background-color: $blue2;
+			border: 1px solid $blue2;
+		}
+	}
 	&.btn_empty {
 		color: $blue;
 		border: 1px solid $blue;
@@ -64,22 +79,11 @@ ul {
 		&:hover {
 			color: $white;
 			background-color: $blue;
-	
 		}
 	}
 }
-
-// % MEDIA QUERIES %                                      
-/*-------- BOOTSTRAP media queries ---------*/
-/* XS >= 0 - default - SEE ABOVE */
-/* SM >= 768 */
-@media screen and (min-width: 768px) { 
+.btn:not(.nav) {
+	// txt_2 per tutti; txt_1 per nav 
+	font-size: 14px;
+	font-weight: 400;
 }
-/* MD >= 992 */
-@media screen and (min-width: 992px) {
-}
-/* LG >= 1200 */
-@media screen and (min-width: 1200px) {
-}
-/*------------------------------------------*/
-

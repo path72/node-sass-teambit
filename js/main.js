@@ -17,27 +17,32 @@ var app = new Vue({
       text: 'Solutions',
       iconSrc: '',
       "class": '',
-      href: '#'
+      href: '#',
+      fas: 'fas fa-caret-down'
     }, {
       text: 'Pricing',
       iconSrc: '',
       "class": '',
-      href: '#'
+      href: '#',
+      fas: ''
     }, {
       text: 'Blog',
       iconSrc: '',
       "class": '',
-      href: '#'
+      href: '#',
+      fas: ''
     }, {
       text: 'Sign in',
       iconSrc: '',
       "class": '',
-      href: '#'
+      href: '#',
+      fas: ''
     }, {
       text: 'Signup',
       iconSrc: 'img/google-logo.svg',
-      "class": 'btn btn_empty',
-      href: '#'
+      "class": 'btn btn_empty nav',
+      href: '#',
+      fas: ''
     }]
   },
   methods: {},
