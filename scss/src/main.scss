@@ -1,7 +1,7 @@
 // utility
 @import "partial/_variables";
+@import "partial/_mixin";
 @import "partial/_common";
-@import "partial/_urls";
 // structure
 @import "partial/_header";
 @import "partial/_jumbotron";
@@ -9,3 +9,5 @@
 @import "partial/_features";
 @import "partial/_testimonial";
 @import "partial/_footer";
+// aux
+@import "partial/_aux";

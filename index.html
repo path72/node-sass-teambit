@@ -8,20 +8,12 @@
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 		<!-- *** [ FONT AWESOME ] *** -->
 		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" /> -->
-		<!-- *** [ BOOTSTRAP ] *** -->
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-		<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 		<!-- *** [ MY CSS ] *** -->
 		<link rel="stylesheet" href="css/main.css">
-		<!-- *** [ JQUERY - Google CDN ] *** -->
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
 		<!-- *** [ Vue.js ] *** -->
-		<!-- development -->
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 		<!-- *** [ AXIOS (after Vue.js) ] *** -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
-		<!-- *** [ MY JS - (jQuery doc ready) ] *** -->
-		<!-- <script type="text/javascript" src="js/main.js"></script> -->
 		<!-- *** *** -->
 		<link rel="shortcut icon" href="#">
 		<title>node-sass-teambit</title>
@@ -41,7 +33,17 @@
 		Bonus
 		Curare anche il layout mobile
 		
-		APPUNTI SCSS
+		*** APPUNTI SCSS ***
+
+		@mixin my-display-flex {
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+		}
+		.div_1 {
+			@include my-display-flex;
+			//other rules
+		}
 
 		@for $i from 1 through 3 {
 			.mt-#{$i} {
@@ -65,78 +67,70 @@
 
 		------------------------------------------>
 
+		<div id="app">
 
-		<header>
-			header
-			<div class="wrapper1150">
-				<div class="logo"></div>
-				<div class="nav"></div>
-			</div>
-
-		</header>
-
-		<main>
-
-			<div id="jumbotron">
-				<div class="wrapper1150">
-					<div class="jumbotron_content">jumbotron_content</div>
+			<header class="wrapper1150">
+				<div class="logo">
+					<img src="img/logo.svg" alt="">
 				</div>
-			</div>
+				<ul class="nav txt_1">
+					<li v-for="item in navEntries">
+						<a :class="item.class" :href="item.href">
+							<img :src="item.iconSrc" alt="">
+							{{item.text}}
+						</a>
+					</li>
+				</ul>
+			</header>
 
-			<div id="description">
-				<div class="wrapper1150">
-					<div class="description_top">description_top</div>
-					<div class="description_bottom">description_bottom</div>
+			<main>
+
+				<div id="jumbotron">
+					<div class="wrapper1150">
+						<div class="jumbotron_content">jumbotron_content</div>
+					</div>
 				</div>
-			</div>
 
-			<div id="features">
-				<div class="feedback">
-					<div class="feedback_left">feedback_left</div>
-					<div class="feedback_right">feedback_right</div>
+				<div id="description">
+					<div class="wrapper1150">
+						<div class="description_top">description_top</div>
+						<div class="description_bottom">description_bottom</div>
+					</div>
 				</div>
-				<div class="surveys">
-					<div class="surveys_left">surveys_left</div>
-					<div class="surveys_right">surveys_right</div>
+
+				<div id="features">
+					<div class="feedback">
+						<div class="feedback_left">feedback_left</div>
+						<div class="feedback_right">feedback_right</div>
+					</div>
+					<div class="surveys">
+						<div class="surveys_left">surveys_left</div>
+						<div class="surveys_right">surveys_right</div>
+					</div>
+					<div class="reviews">
+						<div class="reviews_left">reviews_left</div>
+						<div class="reviews_right">reviews_right</div>
+					</div>
+					<div class="praise">
+						<div class="praise_left">praise_left</div>
+						<div class="praise_right">praise_right</div>
+					</div>
 				</div>
-				<div class="reviews">
-					<div class="reviews_left">reviews_left</div>
-					<div class="reviews_right">reviews_right</div>
+
+				<div id="testimonial">testimonial
+					<div class="title"></div>
+					<div class="box"></div>
+					<div class="btn_row"></div>
 				</div>
-				<div class="praise">
-					<div class="praise_left">praise_left</div>
-					<div class="praise_right">praise_right</div>
-				</div>
-			</div>
 
-			<div id="testimonial">testimonial
-				<div class="title"></div>
-				<div class="box"></div>
-				<div class="btn_row"></div>
-			</div>
+			</main>
 
-		</main>
+			<footer class="wrapper1150">
+				<div class="footer_left">footer_left</div>
+				<div class="footer_right">footer_right</div>
+			</footer>
 
-		<footer class="wrapper1150">
-			<div class="footer_left">footer_left</div>
-			<div class="footer_right">footer_right</div>
-		</footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<div id="app" class="flex-row-co">
-			</div> <!-- Vue.js main instance #app -->
-
+		</div> <!-- Vue.js main instance #app -->
 
 		<!-- *** [ MY JS ] *** -->
 		<script type="text/javascript" src="js/main.js"></script>
