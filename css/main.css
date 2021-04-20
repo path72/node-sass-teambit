@@ -276,12 +276,12 @@ footer {
   padding: 100px 0;
 }
 footer .footer_left {
-  width: 30%;
+  width: 40%;
   height: 600px;
   border: 1px dashed green;
 }
 footer .footer_right {
-  width: 70%;
+  width: 60%;
   height: 600px;
   border: 1px dashed green;
 }
