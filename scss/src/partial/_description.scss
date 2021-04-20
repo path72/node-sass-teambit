@@ -2,4 +2,15 @@
  * DESCRIPTION
  * section
  */
- 
+#description {
+	padding: 90px 0;
+	background-color: $cream;
+	.description_top {
+		height: 400px;
+		border: 1px dashed green;
+	}
+	.description_bottom {
+		height: 400px;
+		border: 1px dashed green;
+	}
+}

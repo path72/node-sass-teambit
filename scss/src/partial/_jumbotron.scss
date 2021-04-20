@@ -2,4 +2,11 @@
  * JUMBOTRON
  * section
  */
- 
+ #jumbotron {
+	padding: 100px 0;
+	border: 1px dashed red;
+	.jumbotron_content {
+		height: 300px;
+		border: 1px dashed green;
+	}
+}

@@ -2,4 +2,18 @@
  * FOOTER
  * section
  */
- 
+footer {
+	display: flex;
+	padding: 100px 0;
+	.footer_left {
+		width: 30%;
+		height: 600px;
+		border: 1px dashed green;
+	}
+	.footer_right {
+		width: 70%;
+		height: 600px;		
+		border: 1px dashed green;
+	}
+}
+
