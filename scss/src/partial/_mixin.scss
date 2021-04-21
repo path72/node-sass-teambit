@@ -15,6 +15,13 @@
 	justify-content: space-between;
 }
 
+// % TEXTS % 
+@mixin txt($size,$weight) {
+	font-size: $size * 1px;
+	font-weight: $weight;
+}
+
+
 
 // .flex-row-co { display: flex; justify-content: center;                      }
 // .flex-row-cc { display: flex; justify-content: center; align-items: center; }

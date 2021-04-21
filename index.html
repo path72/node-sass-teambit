@@ -131,7 +131,14 @@
 			<!-- % FOOTER % -->
 			<footer class="wrapper1150">
 				<div class="footer_left">footer_left</div>
-				<div class="footer_right">footer_right</div>
+				<div class="footer_right">
+					<ul v-for="menu in footerMenus">
+						<li class="txt_footer_title">{{menu.title}}</li>
+						<li v-for="link in menu.links" class="txt_2">
+							<a :href="link.href" :target="link.target">{{link.text}}</a>
+						</li>
+					</ul>
+				</div>
 			</footer>
 
 		</div> <!-- Vue.js main instance #app -->

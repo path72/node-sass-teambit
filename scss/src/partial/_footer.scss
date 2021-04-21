@@ -8,13 +8,24 @@ footer {
 	padding: 100px 0;
 	.footer_left {
 		width: 40%;
-		height: 600px;
 		border: 1px dashed green;
 	}
 	.footer_right {
+		@include flex-row;
 		width: 60%;
-		height: 600px;		
 		border: 1px dashed green;
+		ul {
+			width: 20%;
+			li:first-child {
+				margin-bottom: 25px;
+			}
+			li:not(:first-child) {
+				line-height: 35px;
+			}
+			&:not(:last-child) {
+				padding-right: 15px;
+			}
+		}
 	}
 }
 

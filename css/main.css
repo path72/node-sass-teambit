@@ -66,6 +66,11 @@ ul {
   font-weight: 400;
 }
 
+.txt_footer_title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -277,13 +282,24 @@ footer {
 }
 footer .footer_left {
   width: 40%;
-  height: 600px;
   border: 1px dashed green;
 }
 footer .footer_right {
+  display: flex;
   width: 60%;
-  height: 600px;
   border: 1px dashed green;
+}
+footer .footer_right ul {
+  width: 20%;
+}
+footer .footer_right ul li:first-child {
+  margin-bottom: 25px;
+}
+footer .footer_right ul li:not(:first-child) {
+  line-height: 35px;
+}
+footer .footer_right ul:not(:last-child) {
+  padding-right: 15px;
 }
 
 /**********************************
