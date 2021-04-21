@@ -134,7 +134,6 @@ var app = new Vue({
       }]
     }, {
       title: 'From the blog',
-      titleClass: '',
       links: [{
         text: 'How to change your company culture: a four-step framework',
         href: '#',

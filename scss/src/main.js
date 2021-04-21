@@ -85,7 +85,6 @@ var app = new Vue(
 				},
 				{
 					title		: 'From the blog',
-					titleClass	: '',
 					links: [
 						{ text: 'How to change your company culture: a four-step framework',	href: '#', target: '' },
 						{ text: 'How teams can be more productive by killing 8-hour workday',	href: '#', target: '' },

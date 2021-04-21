@@ -12,44 +12,11 @@
 		<link rel="stylesheet" href="css/main.css">
 		<!-- *** [ Vue.js ] *** -->
 		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-		<!-- *** [ AXIOS (after Vue.js) ] *** -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 		<!-- *** *** -->
 		<link rel="shortcut icon" href="#">
 		<title>node-sass-teambit</title>
 	</head>
 	<body>
-
-		<!-----------------------------------------
-			
-		Esercizio di oggi: Teambit
-		nome repo: node-sass-teambit
-		
-		Descrizione
-		Create un nuovo progetto Laravel Mix e cercando di applicare 
-		tutte le feature e le best practice di Sass viste in classe stamattina, 
-		riproducete il layout in allegato. 
-		
-		Bonus
-		Curare anche il layout mobile
-		
-		*** APPUNTI SCSS ***
-
-		@for $i from 1 through 3 {
-			.mt-#{$i} {
-				margin-top: 1em * $i;
-			}
-		}
-
-		$i: 6;
-		@while $i > 0 {
-			.item-#{$i} {
-				width: 10px * $i;
-			}
-			$i: $i - 2;
-		}
-
-		------------------------------------------>
 
 		<div id="app">
 
@@ -188,7 +155,7 @@
 						<img src="img/happy.svg" alt="">
 					</div>
 					<div class="letter_box">
-						<div class="text_box" v-html="testimonialEntry">{{testimonialEntry}}</div>
+						<div class="text_box" v-html="testimonialEntry"></div>
 						<div class="author_box">
 							<img src="img/alex.png" alt="">
 							<img src="img/bohdan.png" alt="">
