@@ -68,6 +68,7 @@ ul {
 
 .txt_footer_title {
   font-size: 18px;
+  line-height: 23px;
   font-weight: 700;
 }
 
@@ -281,19 +282,30 @@ footer {
   padding: 100px 0;
 }
 footer .footer_left {
+  display: flex;
   width: 40%;
-  border: 1px dashed green;
+  padding-right: 120px;
+}
+footer .footer_left img {
+  display: block;
+  height: 50px;
+  margin-right: 20px;
+}
+footer .footer_left a {
+  color: #314A8F;
+}
+footer .footer_left a:hover {
+  text-decoration: underline;
 }
 footer .footer_right {
   display: flex;
   width: 60%;
-  border: 1px dashed green;
 }
 footer .footer_right ul {
   width: 20%;
 }
 footer .footer_right ul li:first-child {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 footer .footer_right ul li:not(:first-child) {
   line-height: 35px;

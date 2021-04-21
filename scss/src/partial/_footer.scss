@@ -7,17 +7,28 @@ footer {
 	display: flex;
 	padding: 100px 0;
 	.footer_left {
+		@include flex-row;
 		width: 40%;
-		border: 1px dashed green;
+		padding-right: 120px;
+		img {
+			display: block;
+			height: 50px;
+			margin-right: 20px;
+		}
+		a {
+			color: $blue;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 	.footer_right {
 		@include flex-row;
 		width: 60%;
-		border: 1px dashed green;
 		ul {
 			width: 20%;
 			li:first-child {
-				margin-bottom: 25px;
+				margin-bottom: 30px;
 			}
 			li:not(:first-child) {
 				line-height: 35px;
