@@ -54,10 +54,8 @@
 		<div id="app">
 
 			<!-- % HEADER % -->
-			<header class="wrapper1150">
-				<div class="logo">
-					<img src="img/logo.svg" alt="">
-				</div>
+			<header class="wrapper w1">
+				<div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
 				<ul class="nav txt_1">
 					<li v-for="item in navEntries">
 						<a :class="item.class" :href="item.href">
@@ -72,7 +70,7 @@
 			<main>
 
 				<!-- % JUMBOTRON % -->
-				<div id="jumbotron" class="wrapper1150">
+				<div id="jumbotron" class="wrapper w1">
 					<div class="jumbotron_block">
 						<div class="title txt_payoff">Understand, recognize and develop your people</div>
 						<div class="sub_title txt_sub_title">Teambit helps teams create a high performing culture with regular feedback.</div>
@@ -82,8 +80,7 @@
 							<a href="#" class="btn btn_full"><img src="img/slack-logo.svg" alt="">Signup with Slack</a>
 						</div>
 						<div class="link txt_2">
-							<a href="#">or use your email address</a>
-							<a href="#"><i class="fas fa-long-arrow-alt-right"></i></a>
+							<a href="#">or use your email address<i class="fas fa-long-arrow-alt-right txt_4"></i></a>
 						</div>
 					</div>
 					<div class="jumbotron_block">
@@ -93,7 +90,7 @@
 
 				<!-- % DESCRIPTION % -->
 				<div id="description">
-					<div class="wrapper1150">
+					<div class="wrapper w1">
 						<div class="description_block">
 							<div class="title txt_title">Traditional people processes lead to disengagement and turnover.</div>
 							<div class="img_row">
@@ -135,22 +132,50 @@
 				</div>
 
 				<!-- % FEATURES % -->
-				<div id="features">
+				<div id="features" class="wrapper w2">
 					<div class="feedback">
-						<div class="feedback_left">feedback_left</div>
-						<div class="feedback_right">feedback_right</div>
+						<div class="feedback_left">
+							<img src="img/employee-feedback.jpg" alt="">
+						</div>
+						<div class="feedback_right">
+							<div class="txt_title">Feedback to help teammates improve</div>
+							<div class="txt_sub_title">Empower your teammates to know in real time what they are doing well and what they need to improve.</div>
+							<div class="txt_sub_title"><a href="#">Learn more<i class="fas fa-long-arrow-alt-right"></i></a></div>
+							<img src="img/communication.jpg" alt="">
+						</div>
 					</div>
 					<div class="surveys">
-						<div class="surveys_left">surveys_left</div>
-						<div class="surveys_right">surveys_right</div>
+						<div class="surveys_left">
+							<div class="txt_title">Surveys to help the team be better</div>
+							<div class="txt_sub_title">Get real-time insights into your team with research-backed, lightweight and regular surveys.</div>
+							<div class="txt_sub_title"><a href="#">Learn more<i class="fas fa-long-arrow-alt-right"></i></a></div>
+							<img src="img/insights.jpg" alt="">
+						</div>
+						<div class="surveys_right">
+							<img src="img/employee-survey.jpg" alt="">
+						</div>
 					</div>
 					<div class="reviews">
-						<div class="reviews_left">reviews_left</div>
-						<div class="reviews_right">reviews_right</div>
+						<div class="reviews_left">
+							<img src="img/performance-review.jpg" alt="">
+						</div>
+						<div class="reviews_right">
+							<div class="txt_title">Reviews to help teammates get a fair evaluation</div>
+							<div class="txt_sub_title">Make better compensation and promotion decisions with objective and quick performance reviews.</div>
+							<div class="txt_sub_title"><a href="#">Learn more<i class="fas fa-long-arrow-alt-right"></i></a></div>
+							<img src="img/review.jpg" alt="">
+						</div>
 					</div>
 					<div class="praise">
-						<div class="praise_left">praise_left</div>
-						<div class="praise_right">praise_right</div>
+						<div class="praise_left">
+							<div class="txt_title">Praise to help teammates feel valued</div>
+							<div class="txt_sub_title">Make it a habit to recognize and praise people who do great work.</div>
+							<div class="txt_sub_title"><a href="#">Learn more<i class="fas fa-long-arrow-alt-right"></i></a></div>
+							<img src="img/recognition.jpg" alt="">
+						</div>
+						<div class="praise_right">
+							<img src="img/employee-recognition.jpg" alt="">
+						</div>
 					</div>
 				</div>
 
@@ -164,7 +189,7 @@
 			</main>
 
 			<!-- % FOOTER % -->
-			<footer class="wrapper1150">
+			<footer class="wrapper w1">
 				<div class="footer_left">
 					<img src="img/logo-small.svg" alt="">
 					<span class="txt_footer_title"><a href="">Teambit</a> helps teams create high performing cultures by making feedback a daily habit.</span>

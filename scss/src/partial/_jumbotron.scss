@@ -23,14 +23,7 @@
 				color: $grey; 
 			}
 		}
-		.link {
-			@include flex-row-cv;
-			i {
-				font-size: 18px;
-				font-weight: 900;
-				margin-left: 5px;
-			}
-		}
+		@include fas-icon;
 		& > img {
 			width: 100%;
 		}

@@ -26,9 +26,10 @@ a {
 ul {
 	list-style: none;
 }
-.wrapper1150 {
-	width: 1150px;
+.wrapper {
 	margin: 0 auto;
+	&.w1 { width: 1150px; }
+	&.w2 { width: 1550px; }
 }
 
 // % TEXTS % 
@@ -38,10 +39,20 @@ ul {
 }
 .txt_title {
 	font-size: 26px;
+	line-height: 36px;
 	font-weight: 700;
 }
 .txt_sub_title {
 	font-size: 22px;
+	font-weight: 400;
+}
+.txt_footer_title {
+	font-size: 18px;
+	line-height: 23px;
+	font-weight: 700;
+}
+.txt_caption {
+	font-size: 18px;
 	font-weight: 400;
 }
 .txt_1 {
@@ -56,14 +67,9 @@ ul {
 	font-size: 13px;
 	font-weight: 400;
 }
-.txt_footer_title {
+.txt_4 {
 	font-size: 18px;
-	line-height: 23px;
-	font-weight: 700;
-}
-.txt_caption {
-	font-size: 18px;
-	font-weight: 400;
+	font-weight: 900;
 }
 
 // % BUTTONS % 
