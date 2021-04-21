@@ -6,10 +6,8 @@
 #jumbotron {
 	@include flex-row;
 	padding: 100px 0;
-	// border: 1px dashed red;
 	.jumbotron_block {
 		width: 50%;
-		// border: 1px dashed green;
 		.title, .sub_title, .btn_row {
 			margin-bottom: 30px;
 		}

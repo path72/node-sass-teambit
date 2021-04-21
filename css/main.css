@@ -46,6 +46,11 @@ ul {
   font-weight: 700;
 }
 
+.txt_title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
 .txt_sub_title {
   font-size: 22px;
   font-weight: 400;
@@ -70,6 +75,11 @@ ul {
   font-size: 18px;
   line-height: 23px;
   font-weight: 700;
+}
+
+.txt_caption {
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .btn {
@@ -183,16 +193,37 @@ header ul .fas {
  * section
  */
 #description {
-  padding: 90px 0;
+  text-align: center;
+  padding-bottom: 90px;
   background-color: #FFE7D2;
 }
-#description .description_top {
-  height: 400px;
-  border: 1px dashed green;
+#description .description_block {
+  padding: 90px 0 120px;
 }
-#description .description_bottom {
-  height: 400px;
-  border: 1px dashed green;
+#description .description_block .title {
+  padding: 0 250px;
+  margin-bottom: 80px;
+}
+#description .description_block .img_row {
+  display: flex;
+  padding: 0 125px;
+  margin-bottom: 80px;
+}
+#description .description_block .img_row .img_frame {
+  height: 130px;
+}
+#description .description_block .img_row .img_frame img {
+  max-width: 140px;
+  max-height: 105px;
+}
+#description .description_block .img_row .img_box .caption {
+  padding: 0 15px;
+}
+#description .description_block > img {
+  width: 280px;
+}
+#description .description_block:first-child {
+  border-bottom: 1px solid #CCCCCC;
 }
 
 /**********************************
