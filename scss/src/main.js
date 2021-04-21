@@ -6,6 +6,11 @@ var app = new Vue(
 	{
 		el: '#app',
 		data: {
+			switch: 0,
+			logo: [
+				'img/logo.svg',
+				'img/TB_logo.png'
+			],
 			navEntries: [
 				{
 					text: 'Solutions',
@@ -110,6 +115,9 @@ var app = new Vue(
 		created() {
 		},
 		mounted() {
+			let i = 0;
+			if (this.switch == 1) i = 1;
+			document.getElementById('logo').src = this.logo[i];
 		},
 		updated() {
 		}

@@ -10,3 +10,26 @@ $blue	: #314A8F;
 $blue2	: #263566;
 $cream	: #FFE7D2;
 $grey	: #CCCCCC;
+// % GEOMETRY % 
+$logoHeight: 26px;
+
+// % COLORS 2 % 
+$c1: #0414b3;
+$c2: #7f14d4;
+$c3: #0e14ee;
+$c4: #3e14e9;
+// % GEOMETRY % 
+$lH: 35px;
+
+$switch: 0;
+
+// # MAP # 
+@if $switch == 1 {
+	$white	: $c4;
+	$brown	: $c2;
+	$blue	: $c3;
+	$blue2	: $c1;
+	$cream	: $c1;
+	$grey	: $c2;
+	$logoHeight: $lH;
+}

@@ -13,6 +13,8 @@
 var app = new Vue({
   el: '#app',
   data: {
+    "switch": 0,
+    logo: ['img/logo.svg', 'img/TB_logo.png'],
     navEntries: [{
       text: 'Solutions',
       iconSrc: '',
@@ -157,7 +159,11 @@ var app = new Vue({
   methods: {},
   computed: {},
   created: function created() {},
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    var i = 0;
+    if (this["switch"] == 1) i = 1;
+    document.getElementById('logo').src = this.logo[i];
+  },
   updated: function updated() {}
 }); // Vue.config.devtools = true;
 
