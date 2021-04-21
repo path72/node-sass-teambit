@@ -56,7 +56,7 @@
 			<!-- % HEADER % -->
 			<header class="wrapper w1">
 				<div class="logo"><a href="#"><img src="img/logo.svg" alt=""></a></div>
-				<ul class="nav txt_1">
+				<ul class="nav txt_nav">
 					<li v-for="item in navEntries">
 						<a :class="item.class" :href="item.href">
 							<img :src="item.iconSrc" alt="">
@@ -74,13 +74,15 @@
 					<div class="jumbotron_block">
 						<div class="title txt_payoff">Understand, recognize and develop your people</div>
 						<div class="sub_title txt_sub_title">Teambit helps teams create a high performing culture with regular feedback.</div>
-						<div class="btn_row">
-							<a href="#" class="btn btn_full"><img src="img/google-logo.svg" alt="">Signup with Google</a>
-							<span class="txt_3">or</span>
-							<a href="#" class="btn btn_full"><img src="img/slack-logo.svg" alt="">Signup with Slack</a>
-						</div>
-						<div class="link txt_2">
-							<a href="#">or use your email address<i class="fas fa-long-arrow-alt-right txt_4"></i></a>
+						<div class="btn_box">
+							<div class="btn_row">
+								<a href="#" class="btn btn_full"><img src="img/google-logo.svg" alt="">Signup with Google</a>
+								<span class="txt_btn_or">or</span>
+								<a href="#" class="btn btn_full"><img src="img/slack-logo.svg" alt="">Signup with Slack</a>
+							</div>
+							<div class="link txt_link">
+								<a href="#">or use your email address<i class="fas fa-long-arrow-alt-right txt_fas"></i></a>
+							</div>
 						</div>
 					</div>
 					<div class="jumbotron_block">
@@ -180,10 +182,33 @@
 				</div>
 
 				<!-- % TESTIMONIAL % -->
-				<div id="testimonial">testimonial
-					<div class="title"></div>
-					<div class="box"></div>
-					<div class="btn_row"></div>
+				<div id="testimonial">
+					<div class="title txt_big_title">
+						See Teambit for yourself. Get started in seconds
+						<img src="img/happy.svg" alt="">
+					</div>
+					<div class="letter_box">
+						<div class="text_box" v-html="testimonialEntry">{{testimonialEntry}}</div>
+						<div class="author_box">
+							<img src="img/alex.png" alt="">
+							<img src="img/bohdan.png" alt="">
+							<div class="caption">
+								<div class="author txt_link">Alex and Bohdan</div>
+								<div class="role txt_role">Co-Founders at Teambit</div>
+							</div>
+						</div>
+						<span>&ldquo;</span>
+					</div>
+					<div class="btn_box">
+						<div class="btn_row">
+							<a href="#" class="btn btn_full"><img src="img/google-logo.svg" alt="">Signup with Google</a>
+							<span class="txt_btn_or">or</span>
+							<a href="#" class="btn btn_full"><img src="img/slack-logo.svg" alt="">Signup with Slack</a>
+						</div>
+						<div class="link txt_link">
+							<a href="#">or use your email address<i class="fas fa-long-arrow-alt-right txt_fas"></i></a>
+						</div>
+					</div>
 				</div>
 
 			</main>
@@ -197,7 +222,7 @@
 				<div class="footer_right">
 					<ul v-for="menu in footerMenus">
 						<li class="txt_footer_title">{{menu.title}}</li>
-						<li v-for="link in menu.links" class="txt_2">
+						<li v-for="link in menu.links" class="txt_link">
 							<a :href="link.href" :target="link.target">{{link.text}}</a>
 						</li>
 					</ul>

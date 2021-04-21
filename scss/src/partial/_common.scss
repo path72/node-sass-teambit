@@ -37,6 +37,10 @@ ul {
 	font-size: 50px;
 	font-weight: 700;
 }
+.txt_big_title {
+	font-size: 40px;
+	font-weight: 700;
+}
 .txt_title {
 	font-size: 26px;
 	line-height: 36px;
@@ -45,6 +49,10 @@ ul {
 .txt_sub_title {
 	font-size: 22px;
 	font-weight: 400;
+}
+.txt_fas {
+	font-size: 18px;
+	font-weight: 900;
 }
 .txt_footer_title {
 	font-size: 18px;
@@ -55,21 +63,21 @@ ul {
 	font-size: 18px;
 	font-weight: 400;
 }
-.txt_1 {
+.txt_nav {
 	font-size: 14px;
 	font-weight: 700;
 }
-.txt_2 {
+.txt_link {
 	font-size: 14px;
 	font-weight: 400;
 }
-.txt_3 {
+.txt_btn_or {
 	font-size: 13px;
 	font-weight: 400;
 }
-.txt_4 {
-	font-size: 18px;
-	font-weight: 900;
+.txt_role {
+	font-size: 12px;
+	font-weight: 400;
 }
 
 // % BUTTONS % 
@@ -99,9 +107,8 @@ ul {
 			background-color: $blue;
 		}
 	}
-}
-.btn:not(.nav) {
-	// txt_2 per tutti; txt_1 per nav 
-	font-size: 14px;
-	font-weight: 400;
+	&:not(.nav) {
+		font-size: 14px;
+		font-weight: 400;
+	}
 }

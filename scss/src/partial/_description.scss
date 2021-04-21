@@ -2,7 +2,7 @@
  * DESCRIPTION
  * section
  */
- 
+
 #description {
 	text-align: center;
 	padding-bottom: 90px;
@@ -17,22 +17,24 @@
 			@include flex-row;
 			padding: 0 125px;
 			margin-bottom: 80px;
-			.img_frame {
-				height: 130px;
-				img {
-					max-width: 140px;
-					max-height: 105px;
+			.img_box {
+				.img_frame {
+					height: 130px;
+					img {
+						max-width: 140px;
+						max-height: 105px;
+					}
 				}
-			}
-			.img_box .caption {
-				padding: 0 15px;
-			}
+				.caption {
+					padding: 0 15px;
+				}
+			} 
 		}
 		& > img {
 			width: 280px;
 		}
-	}
-	.description_block:first-child {
-		border-bottom: 1px solid $grey;
+		&:first-child {
+			border-bottom: 1px solid $grey;
+		}
 	}
 }

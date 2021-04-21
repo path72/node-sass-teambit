@@ -2,9 +2,46 @@
  * TESTIMONIAL
  * section
  */
- 
+
 #testimonial {
-	 height: 600px;
-	 padding: 55px 0;
-	 background-color: $cream;
+	@include flex-col-co;
+	padding: 55px 0;
+	text-align: center;
+	background-color: $cream;
+	.title {
+		width: 500px;
+		margin-bottom: 80px;
+	}
+	.letter_box {
+		position: relative;
+		width: 620px;
+		padding: 30px;
+		text-align: left;
+		border: 1px solid $grey;
+		border-radius: 8px;
+		background-color: $white;
+		margin-bottom: 40px;
+		.text_box {
+			margin-bottom: 20px;
+		}
+		.author_box {
+			@include flex-row-cv;
+			img {
+				height: 50px;
+				margin-right: 20px;
+			}
+			.author {
+				color: $blue;
+			}
+		} 
+		span {
+			position: absolute;
+			top: -45px;
+			left: -10px;
+			font-family:sans-serif;
+			font-size: 140px;
+			color: $blue;
+		}
+	}
+	@include btn_box;
 }

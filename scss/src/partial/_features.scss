@@ -2,7 +2,7 @@
  * FEATURES
  * section
  */
-
+ 
 #features {
 	@each $item in feedback, surveys, reviews, praise {
 		.#{$item} {

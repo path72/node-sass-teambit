@@ -51,6 +51,11 @@ ul {
   font-weight: 700;
 }
 
+.txt_big_title {
+  font-size: 40px;
+  font-weight: 700;
+}
+
 .txt_title {
   font-size: 26px;
   line-height: 36px;
@@ -60,6 +65,11 @@ ul {
 .txt_sub_title {
   font-size: 22px;
   font-weight: 400;
+}
+
+.txt_fas {
+  font-size: 18px;
+  font-weight: 900;
 }
 
 .txt_footer_title {
@@ -73,24 +83,24 @@ ul {
   font-weight: 400;
 }
 
-.txt_1 {
+.txt_nav {
   font-size: 14px;
   font-weight: 700;
 }
 
-.txt_2 {
+.txt_link {
   font-size: 14px;
   font-weight: 400;
 }
 
-.txt_3 {
+.txt_btn_or {
   font-size: 13px;
   font-weight: 400;
 }
 
-.txt_4 {
-  font-size: 18px;
-  font-weight: 900;
+.txt_role {
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .btn {
@@ -121,7 +131,6 @@ ul {
   color: #FFFFFF;
   background-color: #314A8F;
 }
-
 .btn:not(.nav) {
   font-size: 14px;
   font-weight: 400;
@@ -167,23 +176,21 @@ header ul .fas {
 #jumbotron .jumbotron_block {
   width: 50%;
 }
-#jumbotron .jumbotron_block .title, #jumbotron .jumbotron_block .sub_title, #jumbotron .jumbotron_block .btn_row {
+#jumbotron .jumbotron_block .title, #jumbotron .jumbotron_block .sub_title {
   margin-bottom: 30px;
 }
 #jumbotron .jumbotron_block .sub_title {
   line-height: 35px;
 }
-#jumbotron .jumbotron_block .btn_row {
+#jumbotron .jumbotron_block .btn_box .btn_row {
   display: flex;
   align-items: center;
+  margin-bottom: 30px;
 }
-#jumbotron .jumbotron_block .btn_row > * {
+#jumbotron .jumbotron_block .btn_box .btn_row > * {
   margin-right: 18px;
 }
-#jumbotron .jumbotron_block .btn_row span {
-  color: #CCCCCC;
-}
-#jumbotron .jumbotron_block i {
+#jumbotron .jumbotron_block .btn_box i {
   vertical-align: middle;
   margin-left: 5px;
 }
@@ -215,10 +222,10 @@ header ul .fas {
   padding: 0 125px;
   margin-bottom: 80px;
 }
-#description .description_block .img_row .img_frame {
+#description .description_block .img_row .img_box .img_frame {
   height: 130px;
 }
-#description .description_block .img_row .img_frame img {
+#description .description_block .img_row .img_box .img_frame img {
   max-width: 140px;
   max-height: 105px;
 }
@@ -442,9 +449,60 @@ header ul .fas {
  * section
  */
 #testimonial {
-  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 55px 0;
+  text-align: center;
   background-color: #FFE7D2;
+}
+#testimonial .title {
+  width: 500px;
+  margin-bottom: 80px;
+}
+#testimonial .letter_box {
+  position: relative;
+  width: 620px;
+  padding: 30px;
+  text-align: left;
+  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  margin-bottom: 40px;
+}
+#testimonial .letter_box .text_box {
+  margin-bottom: 20px;
+}
+#testimonial .letter_box .author_box {
+  display: flex;
+  align-items: center;
+}
+#testimonial .letter_box .author_box img {
+  height: 50px;
+  margin-right: 20px;
+}
+#testimonial .letter_box .author_box .author {
+  color: #314A8F;
+}
+#testimonial .letter_box span {
+  position: absolute;
+  top: -45px;
+  left: -10px;
+  font-family: sans-serif;
+  font-size: 140px;
+  color: #314A8F;
+}
+#testimonial .btn_box .btn_row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#testimonial .btn_box .btn_row > * {
+  margin-right: 18px;
+}
+#testimonial .btn_box i {
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 /**********************************
@@ -486,466 +544,4 @@ footer .footer_right ul li:not(:first-child) {
 }
 footer .footer_right ul:not(:last-child) {
   padding-right: 15px;
-}
-
-/**********************************
- * AUX
- * utility
- */
-/*-------- BOOTSTRAP media queries ---------*/
-/* XS >= 0 - default - SEE ABOVE */
-/* SM >= 768 */
-/* MD >= 992 */
-/* LG >= 1200 */
-/*------------------------------------------*/
-/*------ COL HEIGHT ISSUE WORKAROUND -------*/
-/* class="row" >>> class="row display-flex" */
-.row.display-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.row.display-flex > [class*=col-] {
-  display: flex;
-  flex-direction: column;
-}
-
-/*------------------------------------------*/
-/* DEBUG */
-/* .debug [class*="container-"] {
-	border: 1px solid green;
-} */
-.debug [class=row] {
-  border: 1px solid red;
-}
-
-.debug [class*=col-] {
-  position: relative;
-  background-color: pink;
-  border: 1px solid black;
-  /* height: 80px; */
-}
-
-.debug [class*=col-]::before {
-  content: "default";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 99999;
-  font-size: 10px;
-  color: white;
-  min-width: 24px;
-  text-align: center;
-  padding: 3px 6px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.debug [class*=col-xs-1]::before {
-  content: "xs-1";
-}
-
-.debug [class*=col-xs-2]::before {
-  content: "xs-2";
-}
-
-.debug [class*=col-xs-3]::before {
-  content: "xs-3";
-}
-
-.debug [class*=col-xs-4]::before {
-  content: "xs-4";
-}
-
-.debug [class*=col-xs-5]::before {
-  content: "xs-5";
-}
-
-.debug [class*=col-xs-6]::before {
-  content: "xs-6";
-}
-
-.debug [class*=col-xs-7]::before {
-  content: "xs-7";
-}
-
-.debug [class*=col-xs-8]::before {
-  content: "xs-8";
-}
-
-.debug [class*=col-xs-9]::before {
-  content: "xs-9";
-}
-
-.debug [class*=col-xs-10]::before {
-  content: "xs-10";
-}
-
-.debug [class*=col-xs-11]::before {
-  content: "xs-11";
-}
-
-.debug [class*=col-xs-12]::before {
-  content: "xs-12";
-}
-
-.debug [class*=col-xs-offset-1]::before {
-  content: "xs-o-1";
-}
-
-.debug [class*=col-xs-offset-2]::before {
-  content: "xs-o-2";
-}
-
-.debug [class*=col-xs-offset-3]::before {
-  content: "xs-o-3";
-}
-
-.debug [class*=col-xs-offset-4]::before {
-  content: "xs-o-4";
-}
-
-.debug [class*=col-xs-offset-5]::before {
-  content: "xs-o-5";
-}
-
-.debug [class*=col-xs-offset-6]::before {
-  content: "xs-o-6";
-}
-
-.debug [class*=col-xs-offset-7]::before {
-  content: "xs-o-7";
-}
-
-.debug [class*=col-xs-offset-8]::before {
-  content: "xs-o-8";
-}
-
-.debug [class*=col-xs-offset-9]::before {
-  content: "xs-o-9";
-}
-
-.debug [class*=col-xs-offset-10]::before {
-  content: "xs-o-10";
-}
-
-.debug [class*=col-xs-offset-11]::before {
-  content: "xs-o-11";
-}
-
-.debug [class*=col-xs-offset-12]::before {
-  content: "xs-o-12";
-}
-
-.debug [class*=col-xs-]::before,
-.debug [class*=col-xs-offset-]::before {
-  line-height: 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .debug [class*=col-sm-1]::before {
-    content: "sm-1";
-  }
-
-  .debug [class*=col-sm-2]::before {
-    content: "sm-2";
-  }
-
-  .debug [class*=col-sm-3]::before {
-    content: "sm-3";
-  }
-
-  .debug [class*=col-sm-4]::before {
-    content: "sm-4";
-  }
-
-  .debug [class*=col-sm-5]::before {
-    content: "sm-5";
-  }
-
-  .debug [class*=col-sm-6]::before {
-    content: "sm-6";
-  }
-
-  .debug [class*=col-sm-7]::before {
-    content: "sm-7";
-  }
-
-  .debug [class*=col-sm-8]::before {
-    content: "sm-8";
-  }
-
-  .debug [class*=col-sm-9]::before {
-    content: "sm-9";
-  }
-
-  .debug [class*=col-sm-10]::before {
-    content: "sm-10";
-  }
-
-  .debug [class*=col-sm-11]::before {
-    content: "sm-11";
-  }
-
-  .debug [class*=col-sm-12]::before {
-    content: "sm-12";
-  }
-
-  .debug [class*=col-sm-offset-1]::before {
-    content: "sm-o-1";
-  }
-
-  .debug [class*=col-sm-offset-2]::before {
-    content: "sm-o-2";
-  }
-
-  .debug [class*=col-sm-offset-3]::before {
-    content: "sm-o-3";
-  }
-
-  .debug [class*=col-sm-offset-4]::before {
-    content: "sm-o-4";
-  }
-
-  .debug [class*=col-sm-offset-5]::before {
-    content: "sm-o-5";
-  }
-
-  .debug [class*=col-sm-offset-6]::before {
-    content: "sm-o-6";
-  }
-
-  .debug [class*=col-sm-offset-7]::before {
-    content: "sm-o-7";
-  }
-
-  .debug [class*=col-sm-offset-8]::before {
-    content: "sm-o-8";
-  }
-
-  .debug [class*=col-sm-offset-9]::before {
-    content: "sm-o-9";
-  }
-
-  .debug [class*=col-sm-offset-10]::before {
-    content: "sm-o-10";
-  }
-
-  .debug [class*=col-sm-offset-11]::before {
-    content: "sm-o-11";
-  }
-
-  .debug [class*=col-sm-offset-12]::before {
-    content: "sm-o-12";
-  }
-
-  .debug [class*=col-sm-]::before,
-.debug [class*=col-sm-offset-]::before {
-    line-height: 100%;
-  }
-}
-@media screen and (min-width: 992px) {
-  .debug [class*=col-md-1]::before {
-    content: "md-1";
-  }
-
-  .debug [class*=col-md-2]::before {
-    content: "md-2";
-  }
-
-  .debug [class*=col-md-3]::before {
-    content: "md-3";
-  }
-
-  .debug [class*=col-md-4]::before {
-    content: "md-4";
-  }
-
-  .debug [class*=col-md-5]::before {
-    content: "md-5";
-  }
-
-  .debug [class*=col-md-6]::before {
-    content: "md-6";
-  }
-
-  .debug [class*=col-md-7]::before {
-    content: "md-7";
-  }
-
-  .debug [class*=col-md-8]::before {
-    content: "md-8";
-  }
-
-  .debug [class*=col-md-9]::before {
-    content: "md-9";
-  }
-
-  .debug [class*=col-md-10]::before {
-    content: "md-10";
-  }
-
-  .debug [class*=col-md-11]::before {
-    content: "md-11";
-  }
-
-  .debug [class*=col-md-12]::before {
-    content: "md-12";
-  }
-
-  .debug [class*=col-md-offset-1]::before {
-    content: "md-o-1";
-  }
-
-  .debug [class*=col-md-offset-2]::before {
-    content: "md-o-2";
-  }
-
-  .debug [class*=col-md-offset-3]::before {
-    content: "md-o-3";
-  }
-
-  .debug [class*=col-md-offset-4]::before {
-    content: "md-o-4";
-  }
-
-  .debug [class*=col-md-offset-5]::before {
-    content: "md-o-5";
-  }
-
-  .debug [class*=col-md-offset-6]::before {
-    content: "md-o-6";
-  }
-
-  .debug [class*=col-md-offset-7]::before {
-    content: "md-o-7";
-  }
-
-  .debug [class*=col-md-offset-8]::before {
-    content: "md-o-8";
-  }
-
-  .debug [class*=col-md-offset-9]::before {
-    content: "md-o-9";
-  }
-
-  .debug [class*=col-md-offset-10]::before {
-    content: "md-o-10";
-  }
-
-  .debug [class*=col-md-offset-11]::before {
-    content: "md-o-11";
-  }
-
-  .debug [class*=col-md-offset-12]::before {
-    content: "md-o-12";
-  }
-
-  .debug [class*=col-md-]::before,
-.debug [class*=col-md-offset-]::before {
-    line-height: 100%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .debug [class*=col-lg-1]::before {
-    content: "lg-1";
-  }
-
-  .debug [class*=col-lg-2]::before {
-    content: "lg-2";
-  }
-
-  .debug [class*=col-lg-3]::before {
-    content: "lg-3";
-  }
-
-  .debug [class*=col-lg-4]::before {
-    content: "lg-4";
-  }
-
-  .debug [class*=col-lg-5]::before {
-    content: "lg-5";
-  }
-
-  .debug [class*=col-lg-6]::before {
-    content: "lg-6";
-  }
-
-  .debug [class*=col-lg-7]::before {
-    content: "lg-7";
-  }
-
-  .debug [class*=col-lg-8]::before {
-    content: "lg-8";
-  }
-
-  .debug [class*=col-lg-9]::before {
-    content: "lg-9";
-  }
-
-  .debug [class*=col-lg-10]::before {
-    content: "lg-10";
-  }
-
-  .debug [class*=col-lg-11]::before {
-    content: "lg-11";
-  }
-
-  .debug [class*=col-lg-12]::before {
-    content: "lg-12";
-  }
-
-  .debug [class*=col-lg-offset-1]::before {
-    content: "lg-o-1";
-  }
-
-  .debug [class*=col-lg-offset-2]::before {
-    content: "lg-o-2";
-  }
-
-  .debug [class*=col-lg-offset-3]::before {
-    content: "lg-o-3";
-  }
-
-  .debug [class*=col-lg-offset-4]::before {
-    content: "lg-o-4";
-  }
-
-  .debug [class*=col-lg-offset-5]::before {
-    content: "lg-o-5";
-  }
-
-  .debug [class*=col-lg-offset-6]::before {
-    content: "lg-o-6";
-  }
-
-  .debug [class*=col-lg-offset-7]::before {
-    content: "lg-o-7";
-  }
-
-  .debug [class*=col-lg-offset-8]::before {
-    content: "lg-o-8";
-  }
-
-  .debug [class*=col-lg-offset-9]::before {
-    content: "lg-o-9";
-  }
-
-  .debug [class*=col-lg-offset-10]::before {
-    content: "lg-o-10";
-  }
-
-  .debug [class*=col-lg-offset-11]::before {
-    content: "lg-o-11";
-  }
-
-  .debug [class*=col-lg-offset-12]::before {
-    content: "lg-o-12";
-  }
-
-  .debug [class*=col-lg-]::before,
-.debug [class*=col-lg-offset-]::before {
-    line-height: 100%;
-  }
 }

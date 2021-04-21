@@ -22,10 +22,6 @@
 @mixin fx-grow-2 { flex-grow: 2; }
 
 // % TEXTS % 
-@mixin txt($size,$weight) {
-	font-size: $size * 1px;
-	font-weight: $weight;
-}
 @mixin fas-icon {
 	i {
 		vertical-align: middle;
@@ -33,15 +29,14 @@
 	}
 }
 
-// /* vertical paddings */
-// .padding_v_big { padding-top: 100px; padding-bottom: 100px; }
-// .padding_v_med { padding-top:  60px; padding-bottom:  60px; }
-// .padding_v_sml { padding-top:  30px; padding-bottom:  30px; }
-// .padding_v_min { padding-top:  10px; padding-bottom:  10px; }
-// .float_l { float: left; }
-// .float_r { float: right; }
-// .clearfix {
-// 	content: "";
-// 	display: table;
-// 	clear: both;
-// }
+// % BUTTONS % 
+@mixin btn_box {
+	.btn_box {
+		.btn_row {
+			@include flex-row-cv;
+			& > * { margin-right: 18px; }
+			margin-bottom: 30px;
+		}
+		@include fas-icon;
+	}
+}

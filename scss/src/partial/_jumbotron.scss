@@ -8,27 +8,18 @@
 	padding: 100px 0;
 	.jumbotron_block {
 		width: 50%;
-		.title, .sub_title, .btn_row {
+		.title, .sub_title {
 			margin-bottom: 30px;
 		}
 		.sub_title {
 			line-height: 35px;
 		}
-		.btn_row {
-			@include flex-row-cv;
-			& > * {
-				margin-right: 18px;
-			}
-			span { 
-				color: $grey; 
-			}
-		}
-		@include fas-icon;
+		@include btn_box;
 		& > img {
 			width: 100%;
 		}
-	}
-	.jumbotron_block:first-child {
-		padding-right: 60px;
+		&:first-child {
+			padding-right: 60px;
+		}
 	}
 }

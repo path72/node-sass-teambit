@@ -152,7 +152,8 @@ var app = new Vue({
         href: '#',
         target: ''
       }]
-    }]
+    }],
+    testimonialEntry: "\n\t\t\t\tWe are experiencing what Gallup calls 'an employee engagement crisis'. Just one-third of people at work are engaged.\n\t\t\t\t<br><br>\n\t\t\t\tTo improve performance and engagement companies rely on the same principles as industrial-age factories. But all those annual performance reviews and hundred-question surveys don't work anymore. People want regular feedback. Leaders who don't embrace this change end up with misaligned, disengaged and dwindling team.\n\t\t\t\t<br><br>\n\t\t\t\tWe designed Teambit to change that. It empowers teams to make feedback a daily habit. Everybody knows what they are doing well and what they need to improve, leading to better performing, engaged and happier teams.\n\t\t\t\t<br><br>\n\t\t\t\tWe are on a mission to make worklife exciting. Come join us.\n\t\t\t"
   },
   methods: {},
   computed: {},
